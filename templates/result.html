@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Resultado</h1>
+        <p>Imagen original:</p>
+        <img src="{{ url_for('static', filename=original_filename) }}" class="img-fluid">
+        <p class="mt-3">Imagen procesada:</p>
+        <img src="{{ url_for('static', filename='process/' + processed_filename) }}" class="img-fluid">
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-3">Volver</a>
+    </div>
+</body>
+</html>
